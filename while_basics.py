@@ -1,4 +1,6 @@
 # Replace the "ANSWER HERE" for your answer
+from unicodedata import numeric
+
 
 def countdown(n):
     """
@@ -9,7 +11,19 @@ def countdown(n):
     Ejemplo: countdown(0) -> [0]
     Ejemplo: countdown(-1) -> []
     """
-    return "ANSWER HERE"  # Remove this line and implement
+
+    if n < 0:
+        return []
+
+
+    lst = []
+    while n >= 0:
+        lst.append(n)
+        n -= 1
+
+    return lst
+
+
 
 
 def double_until(limit):
@@ -22,4 +36,17 @@ def double_until(limit):
     Ejemplo: double_until(1) -> [1]
     Ejemplo: double_until(0) -> []
     """
-    return "ANSWER HERE"  # Remove this line and implement
+
+
+    if limit < 1:
+        return []
+
+    n = 1
+    lst = []
+
+    while n <= limit:
+        lst.append(n)
+        n *= 2
+
+    return lst
+
